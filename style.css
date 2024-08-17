@@ -1,0 +1,270 @@
+/* 기본 스타일 초기화 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	color: #333;
+	background-color: #f5f5f7;
+	line-height: 1.6;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+a {
+	color: rgb(125, 125, 125);
+}
+
+header {
+	background-color: #ffffff;
+	padding: 20px 0;
+	text-align: center;
+	border-bottom: 1px solid #e1e4e8;
+}
+
+header h2 {
+	font-size: 24px;
+	font-weight: 600;
+	color: #333;
+}
+
+section {
+	flex: 1;
+	padding: 40px;
+	max-width: 1200px;
+	margin: 0.3rem auto;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section div {
+	margin-bottom: 30px;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 15px;
+	color: #333;
+}
+
+label {
+	display: block;
+	margin-bottom: 20px;
+}
+
+textarea,
+input[type="text"] {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #cccccc;
+	border-radius: 8px;
+	font-size: 16px;
+	line-height: 1.5;
+	margin-top: 5px;
+}
+
+textarea {
+	resize: vertical;
+}
+
+#amzAddBox {
+	margin-top: 30px;
+}
+
+#output {
+	margin-top: 30px;
+}
+
+footer {
+	background-color: #ffffff;
+	padding: 20px 0;
+	text-align: center;
+	border-top: 1px solid #e1e4e8;
+}
+
+#copyright {
+	color: #666;
+	font-size: 14px;
+}
+
+/* 버튼 스타일 */
+.button-container {
+	display: flex;
+	justify-content: center;
+	gap: 10px; /* Add some space between buttons */
+	margin-top: 20px;
+}
+
+#downloadBtn,
+#clearBtn {
+	display: inline-block;
+	padding: 12px 24px;
+	background-color: #d1d1d1; /* Base color */
+	color: #333;
+	font-size: 16px;
+	font-weight: 500;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.3s, box-shadow 0.3s;
+	width: 100%;
+}
+
+#downloadBtn:hover,
+#clearBtn:hover {
+	background-color: #b3b3b3; /* Hover color */
+}
+
+#downloadBtn:active,
+#clearBtn:active {
+	background-color: #9a9a9a; /* Clicked color */
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#downloadBtn:focus,
+#clearBtn:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3);
+}
+
+/* 모달 스타일 */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed;
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+	background-color: #ffffff;
+	margin: 15% auto; /* Centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+	max-width: 400px; /* Max width for compactness */
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	position: relative; /* For positioning the close button */
+}
+
+#model-message {
+	margin: 0 auto 3rem;
+	text-align: center;
+}
+
+.modal p {
+	font-size: 16px;
+	color: #333;
+	margin-bottom: 20px; /* Space below the text */
+}
+
+/* Close button in modal */
+.close-btn {
+	position: absolute;
+	bottom: 10px; /* Place the button 10px from the bottom */
+	left: 50%;
+	transform: translateX(-50%); /* Center horizontally */
+	color: #aaa;
+	font-size: 24px;
+	font-weight: bold;
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.close-btn:hover {
+	color: #333;
+}
+
+/* 데스크톱 스타일 */
+@media (min-width: 1024px) {
+	header h2 {
+		font-size: 28px;
+	}
+
+	section {
+		padding: 50px;
+	}
+
+	textarea,
+	input[type="text"] {
+		font-size: 18px;
+	}
+
+	#downloadBtn,
+	#clearBtn {
+		font-size: 18px;
+		padding: 14px 28px;
+	}
+}
+
+/* 태블릿 스타일 */
+@media (min-width: 768px) and (max-width: 1023px) {
+	header h2 {
+		font-size: 26px;
+	}
+
+	section {
+		padding: 40px;
+	}
+
+	textarea,
+	input[type="text"] {
+		font-size: 17px;
+	}
+
+	#downloadBtn,
+	#clearBtn {
+		font-size: 17px;
+		padding: 12px 24px;
+	}
+}
+
+/* 모바일 스타일 */
+@media (max-width: 767px) {
+	header {
+		padding: 15px 0;
+	}
+
+	header h2 {
+		font-size: 22px;
+	}
+
+	section {
+		padding: 20px;
+		width: 100%;
+		box-shadow: none;
+	}
+
+	textarea,
+	input[type="text"] {
+		font-size: 16px;
+	}
+
+	footer {
+		padding: 15px 0;
+	}
+
+	#downloadBtn,
+	#clearBtn {
+		width: 100%;
+		font-size: 16px;
+		padding: 12px;
+	}
+}

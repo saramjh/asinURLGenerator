@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASIN URL Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <h2>ASIN URL Generator</h2>
+  </header>
+  <section>
+    <div>
+      <label for="codeInput">
+        <h3>ASIN CODE</h3>
+        <textarea id="codeInput" rows="10" cols="50" placeholder="Enter your code here...">
+B08N5WRWNW
+</textarea>
+      </label>
+    </div>
+    <div id="amzAddBox">
+      <label id="amzLabel" for="amzAddress">URL
+        <input id="amzAddress" type="text" name="amzAddress">
+      </label>
+      <div>
+        <h3>ASIN Links</h3>
+        <div id="output"></div>
+        <div class="button-container">
+          <button id="downloadBtn">Download XLSX</button>
+          <button id="clearBtn">Clear Textarea</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div id="copyright">© 2024 devTestudinidae. All rights reserved.</div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p id="model-message">No ASIN codes were entered.<br> Please generate links before downloading.</p>
+      <span class="close-btn">&times;</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
