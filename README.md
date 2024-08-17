@@ -59,8 +59,8 @@ To use the ASIN URL Generator, follow these steps:
 ## File Structure
 
 - `index.html`: The main HTML file for the application.
-- `style.css`: Contains the CSS for styling the application.
-- `script.js`: Contains the JavaScript code for functionality.
+- `css/style.css`: Contains the CSS for styling the application.
+- `scripts/script.js`: Contains the JavaScript code for functionality.
 - `README.md`: This file.
 
 ## Dependencies
