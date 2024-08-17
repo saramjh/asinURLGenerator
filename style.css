@@ -17,6 +17,11 @@ body {
 
 a {
 	color: rgb(125, 125, 125);
+	text-decoration-line: none;
+}
+
+a:hover {
+	text-decoration-line: underline;
 }
 
 header {
