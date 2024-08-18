@@ -4,9 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASIN URL Generator</title>
+  <title>ASIN URL Generator - Generate and Export Amazon ASIN Links</title>
+  <meta name="description"
+    content="Generate Amazon URLs from ASIN codes, export them as an Excel file, and manage your ASIN list efficiently with this easy-to-use tool.">
+  <meta name="keywords" content="ASIN, URL Generator, Amazon, Excel Export, Web Tool">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://saramjh.github.io/asinURLGenerator/">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:title" content="ASIN URL Generator - Generate and Export Amazon ASIN Links">
+  <meta property="og:description"
+    content="Generate Amazon URLs from ASIN codes, export them as an Excel file, and manage your ASIN list efficiently with this easy-to-use tool.">
+  <meta property="og:image" content="https://saramjh.github.io/asinURLGenerator/images/preview.jpg">
+  <meta property="og:url" content="https://saramjh.github.io/asinURLGenerator/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ASIN URL Generator - Generate and Export Amazon ASIN Links">
+  <meta name="twitter:description"
+    content="Generate Amazon URLs from ASIN codes, export them as an Excel file, and manage your ASIN list efficiently with this easy-to-use tool.">
+  <meta name="twitter:image" content="https://saramjh.github.io/asinURLGenerator/images/preview.jpg">
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 
@@ -19,19 +40,8 @@
       <label for="codeInput">
         <h3>ASIN CODE</h3>
         <textarea id="codeInput" rows="10" cols="50" placeholder="Enter your code here...">
-          B08K852YRT
-          B08K852YRT
-          B08K852YRT
-          B08K852YRT
-          B08K852YRT
-          B08K852YRT
-          B08K852YRT
-          B08K852YRT
-          B08K852YRT
-          B08K852YRT
-          B08K852YRT
-          B08K852YRT
-</textarea>
+B08N5WRWNW
+        </textarea>
       </label>
     </div>
     <div id="amzAddBox">
@@ -50,14 +60,13 @@
   </section>
 
   <footer>
-    <div id="copyright"><a href="https://github.com/saramjh/asinURLGenerator">© 2024 Saramjh. All rights reserved.</a>
-    </div>
+    <div id="copyright">© 2024 Saramjh. All rights reserved.</div>
   </footer>
 
   <!-- Modal -->
   <div id="modal" class="modal">
     <div class="modal-content">
-      <p id="model-message">No ASIN codes were entered.<br> Please generate links before downloading.</p>
+      <p>No ASIN codes were entered. Please generate links before downloading.</p>
       <span class="close-btn">&times;</span>
     </div>
   </div>
