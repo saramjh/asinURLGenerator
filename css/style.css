@@ -26,14 +26,16 @@ a:hover {
 
 #tip {
 	font-size: 0.9rem;
+	font-weight: 600;
 	padding: 0.7rem 1rem;
 	border-radius: 0.7rem;
 	background-color: #cccccc;
 }
 
 #tip span {
+	font-weight: 400;
 	background-color: #ffffff;
-	padding: 0.5rem;
+	padding: 0.4rem 0.7rem;
 	margin: 0 0.5rem;
 	border-radius: 0.7rem;
 }
