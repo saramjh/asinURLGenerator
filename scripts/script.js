@@ -105,3 +105,40 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	})
 })
+
+// service worker
+if ("serviceWorker" in navigator) {
+	window.addEventListener("load", function () {
+		navigator.serviceWorker.register("/scripts/service-worker.js").then(
+			function (registration) {
+				console.log("ServiceWorker registration successful with scope: ", registration.scope)
+			},
+			function (err) {
+				console.log("ServiceWorker registration failed: ", err)
+			}
+		)
+	})
+}
+
+let deferredPrompt
+
+window.addEventListener("beforeinstallprompt", (e) => {
+	e.preventDefault() // 기본 동작 방지
+	deferredPrompt = e // 이벤트 저장
+	document.getElementById("add-button").style.display = "block" // 버튼 표시
+})
+
+document.getElementById("add-button").addEventListener("click", () => {
+	if (deferredPrompt) {
+		// deferredPrompt가 존재하는지 확인
+		deferredPrompt.prompt() // A2HS 프롬프트 표시
+		deferredPrompt.userChoice.then((choiceResult) => {
+			if (choiceResult.outcome === "accepted") {
+				console.log("사용자가 홈 화면 추가를 수락했습니다.")
+			} else {
+				console.log("사용자가 홈 화면 추가를 거부했습니다.")
+			}
+			deferredPrompt = null // 사용 후 초기화
+		})
+	}
+})
