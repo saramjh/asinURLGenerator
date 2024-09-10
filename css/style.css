@@ -67,7 +67,7 @@ section div {
 	margin-bottom: 30px;
 }
 
-h3 {
+label > span {
 	font-size: 18px;
 	font-weight: 500;
 	margin-bottom: 15px;
